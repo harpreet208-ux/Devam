@@ -33,19 +33,27 @@
                 Share a few details about your project and we&apos;ll get back to you
                 as soon as possible with next steps.
             </p>
-            <form class="contact-form">
+
+            <!-- Contact form connected to Formspree -->
+            <form class="contact-form"
+                  action="https://formspree.io/f/xzzlglwn"
+                  method="POST">
+                  
                 <label>
                     Name
-                    <input type="text" name="name" placeholder="Your full name">
+                    <input type="text" name="name" placeholder="Your full name" required>
                 </label>
+
                 <label>
                     Email
-                    <input type="email" name="email" placeholder="harpreet208@gmail.com">
+                    <input type="email" name="email" placeholder="harpreet208@gmail.com" required>
                 </label>
+
                 <label>
                     Phone
                     <input type="tel" name="phone" placeholder="519-981-6600">
                 </label>
+
                 <label>
                     Project Type
                     <select name="project">
@@ -58,11 +66,16 @@
                         <option value="other">Other</option>
                     </select>
                 </label>
+
                 <label>
                     Project Details
-                    <textarea name="details" rows="5" placeholder="Tell us about your project, location and timeline."></textarea>
+                    <textarea name="details" rows="5" placeholder="Tell us about your project, location and timeline." required></textarea>
                 </label>
-                <button type="submit" class="btn-primary full-width">Submit (form demo only)</button>
+
+                <!-- Email subject for your inbox -->
+                <input type="hidden" name="_subject" value="New inquiry from Devam Construction website">
+
+                <button type="submit" class="btn-primary full-width">Submit</button>
             </form>
         </div>
 
