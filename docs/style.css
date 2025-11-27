@@ -36,6 +36,7 @@ h1, h2, h3, h4 {
 
 .section {
     padding: 56px 0;
+    background: #f2f2f5; /* light grey professional background */
 }
 
 .section-accent {
@@ -390,12 +391,12 @@ h1, h2, h3, h4 {
 
 .contact-form input:focus,
 .contact-form select:focus,
-contact-form textarea:focus {
+.contact-form textarea:focus {
     outline: 2px solid #111827;
     outline-offset: 1px;
 }
 
-/* ===== Slider ===== */
+/* ===== Slider (no longer used, safe to keep) ===== */
 .slider {
     position: relative;
     max-width: 900px;
@@ -473,6 +474,34 @@ contact-form textarea:focus {
 
 .dot.active {
     background: #111827;
+}
+
+/* ===== Gallery Grid ===== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    margin-top: 16px;
+}
+
+.gallery-item {
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-item .caption {
+    padding: 10px 14px 14px;
+    font-size: 0.9rem;
+    color: #374151;
 }
 
 /* ===== Footer ===== */
