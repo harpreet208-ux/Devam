@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devam Construction - Calgary, Alberta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Devam Construction</h1>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Your Trusted Construction Experts in Calgary</h2>
+            <p>Specializing in basements, windows, decks, and garrison making. Licensed and legal work.</p>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-list">
+                <div class="service">
+                    <h3>Basement Renovations</h3>
+                    <p>1-room and 2-room basement renovations done legally and efficiently.</p>
+                </div>
+                <div class="service">
+                    <h3>Window Installation & Repair</h3>
+                    <p>Professional window installation and repair for residential homes.</p>
+                </div>
+                <div class="service">
+                    <h3>Deck Installation</h3>
+                    <p>Custom decks built to enhance your outdoor living space.</p>
+                </div>
+                <div class="service">
+                    <h3>Garrison Making</h3>
+                    <p>Durable and precise garrison construction for homes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Devam Construction</h2>
+            <p>Based in Calgary, Alberta, Devam Construction is dedicated to quality workmanship and customer satisfaction. Licensed and insured, we handle all projects legally and professionally.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:harpreet208@gmail.com">harpreet208@gmail.com</a></p>
+            <p>Phone: <a href="tel:+15199816600">519-981-6600</a></p>
+            <p>Location: Calgary, Alberta, Canada</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Devam Construction. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
