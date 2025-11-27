@@ -4,109 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - Devam Construction</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            background: #004aad;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            margin: 10px 0 0;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: 40px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
-        }
-        h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #004aad;
-        }
-        .service-item {
-            margin-bottom: 20px;
-        }
-        .service-item h3 {
-            color: #004aad;
-            margin-bottom: 5px;
-        }
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
-    </style>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <header>
-        <h1>Devam Construction</h1>
+<header class="site-header">
+    <div class="container nav-container">
+        <div class="logo">
+            <span class="logo-main">Devam</span>
+            <span class="logo-sub">Construction</span>
+        </div>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about/index.html">About</a></li>
+                <li><a href="index.html" class="active">Services</a></li>
+                <li><a href="../gallery.html">Gallery</a></li>
+                <li><a href="../contact.html" class="btn-nav">Contact</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
+</header>
 
+<main class="section">
     <div class="container">
-        <h2>Our Services</h2>
+        <header class="section-header">
+            <h1>Our Construction Services</h1>
+            <p>
+                From small upgrades to full renovations, we provide practical
+                solutions tailored to Calgary homes.
+            </p>
+        </header>
 
-        <div class="service-item">
-            <h3>Deck Construction</h3>
-            <p>Custom decks designed and built with precision and durability to enhance your outdoor living space.</p>
+        <div class="card-grid">
+            <article class="card">
+                <h3>Deck Construction</h3>
+                <p>
+                    Custom decks built with pressure-treated lumber, composite
+                    or cedar. We handle framing, stairs, railings and finishing.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Basement Development</h3>
+                <p>
+                    Complete basement development, including framing, drywall,
+                    lighting, flooring and bathroom installation.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Garages & Structures</h3>
+                <p>
+                    Detached garages, small additions and sheds, built with proper
+                    concrete foundations and weather-ready materials.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Window & Door Installation</h3>
+                <p>
+                    Replacement of existing windows and doors with efficient units
+                    and clean interior and exterior finishing.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Interior Renovations</h3>
+                <p>
+                    Kitchens, bathrooms, flooring and interior updates to improve
+                    the look and function of your home.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Small Projects & Repairs</h3>
+                <p>
+                    Have a smaller project? We also help with minor framing,
+                    trim, drywall and finishing repairs.
+                </p>
+            </article>
         </div>
 
-        <div class="service-item">
-            <h3>Garage Building</h3>
-            <p>Detached, attached, or custom garages tailored to meet your specific needs and style.</p>
-        </div>
-
-        <div class="service-item">
-            <h3>Basement Development</h3>
-            <p>Complete basement finishing and remodeling for functional and comfortable living spaces.</p>
-        </div>
-
-        <div class="service-item">
-            <h3>Home Renovations</h3>
-            <p>Modern upgrades, repairs, and full home transformations with attention to detail and quality.</p>
+        <div class="section callout">
+            <h2>Not sure where to start?</h2>
+            <p>
+                Tell us what you&apos;d like to change in your home and we&apos;ll
+                suggest practical options that fit your budget.
+            </p>
+            <a href="../contact.html" class="btn-primary">Talk to Devam Construction</a>
         </div>
     </div>
+</main>
 
-    <footer>
+<footer class="site-footer">
+    <div class="footer-bottom">
         <p>&copy; 2025 Devam Construction. All rights reserved.</p>
-    </footer>
+    </div>
+</footer>
 </body>
 </html>
