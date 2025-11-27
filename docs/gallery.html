@@ -32,53 +32,50 @@
             <p>A look at some of our recent construction and renovation work.</p>
         </header>
 
-        <div class="slider">
-            <div class="slides">
+        <div class="gallery-grid">
 
-                <!-- Slide 1 -->
-                <div class="slide active">
-                    <img src="images/IMG_5380.jpeg" alt="Window installation project">
-                    <p class="caption">Window installation with clean exterior finishing.</p>
-                </div>
-
-                <!-- Slide 2 -->
-                <div class="slide">
-                    <img src="images/deck1.jpg" alt="Deck construction">
-                    <p class="caption">Custom backyard deck for outdoor living.</p>
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="slide">
-                    <img src="images/basement1.jpg" alt="Basement renovation">
-                    <p class="caption">Basement development with new flooring and lighting.</p>
-                </div>
-
-                <!-- Slide 4 -->
-                <div class="slide">
-                    <img src="images/garage1.jpg" alt="Garage build">
-                    <p class="caption">New detached garage with storage space.</p>
-                </div>
-
-                <!-- Slide 5 – NEW Garage Photo -->
-                <div class="slide">
-                    <img src="images/IMG_0164.jpeg" alt="Garage construction project">
-                    <p class="caption">Garage construction project – clean, strong framing and finish.</p>
-                </div>
-
+            <!-- Window installation -->
+            <div class="gallery-item">
+                <img src="images/IMG_5380.jpeg" alt="Window installation project">
+                <p class="caption">Window installation with clean finishing.</p>
             </div>
 
-            <!-- Prev / Next buttons -->
-            <button class="slider-btn prev">&#10094;</button>
-            <button class="slider-btn next">&#10095;</button>
-
-            <!-- Dots -->
-            <div class="slider-dots">
-                <span class="dot active" data-slide="0"></span>
-                <span class="dot" data-slide="1"></span>
-                <span class="dot" data-slide="2"></span>
-                <span class="dot" data-slide="3"></span>
-                <span class="dot" data-slide="4"></span>
+            <!-- Garage new -->
+            <div class="gallery-item">
+                <img src="images/IMG_0164.jpeg" alt="Garage construction project">
+                <p class="caption">Garage framing and finishing.</p>
             </div>
+
+            <!-- Garage 2 -->
+            <div class="gallery-item">
+                <img src="images/Garage2.JPG" alt="Garage project">
+                <p class="caption">Garage build in progress.</p>
+            </div>
+
+            <!-- Garage 3 -->
+            <div class="gallery-item">
+                <img src="images/Garage3.JPG" alt="Garage project">
+                <p class="caption">Completed detached garage structure.</p>
+            </div>
+
+            <!-- Deck 1 -->
+            <div class="gallery-item">
+                <img src="images/Deck1.JPG" alt="Deck construction">
+                <p class="caption">Deck installation for outdoor living space.</p>
+            </div>
+
+            <!-- Deck 2 -->
+            <div class="gallery-item">
+                <img src="images/Deck2.JPG" alt="Deck construction">
+                <p class="caption">Backyard deck with strong framing.</p>
+            </div>
+
+            <!-- TV mount -->
+            <div class="gallery-item">
+                <img src="images/Tv_mount.JPG" alt="TV wall mount">
+                <p class="caption">Professional TV wall mounting service.</p>
+            </div>
+
         </div>
     </div>
 </main>
@@ -88,39 +85,5 @@
         <p>&copy; 2025 Devam Construction. All rights reserved.</p>
     </div>
 </footer>
-
-<script>
-    const slides = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.dot');
-    const prevBtn = document.querySelector('.prev');
-    const nextBtn = document.querySelector('.next');
-    let currentSlide = 0;
-
-    function showSlide(index) {
-        if (index < 0) index = slides.length - 1;
-        if (index >= slides.length) index = 0;
-        currentSlide = index;
-
-        slides.forEach((slide, i) => {
-            slide.classList.toggle('active', i === currentSlide);
-        });
-
-        dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === currentSlide);
-        });
-    }
-
-    prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
-    nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
-
-    dots.forEach(dot => {
-        dot.addEventListener('click', () => {
-            const index = parseInt(dot.getAttribute('data-slide'), 10);
-            showSlide(index);
-        });
-    });
-
-    setInterval(() => showSlide(currentSlide + 1), 5000);
-</script>
 </body>
 </html>
