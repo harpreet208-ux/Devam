@@ -4,96 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Devam Construction</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            background: #004aad;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            margin: 10px 0 0;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            width: 90%;
-            max-width: 700px;
-            margin: 40px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
-        }
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #004aad;
-        }
-        p {
-            margin-bottom: 10px;
-        }
-        a {
-            color: #004aad;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Devam Construction</h1>
+<header class="site-header">
+    <div class="container nav-container">
+        <div class="logo">
+            <span class="logo-main">Devam</span>
+            <span class="logo-sub">Construction</span>
+        </div>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about/index.html">About</a></li>
+                <li><a href="services/index.html">Services</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="active btn-nav">Contact</a></li>
             </ul>
         </nav>
-    </header>
-
-    <div class="container">
-        <h2>Contact Us</h2>
-        <p><strong>Email:</strong> <a href="mailto:harpreet208@gmail.com">harpreet208@gmail.com</a></p>
-        <p><strong>Phone:</strong> <a href="tel:+15199816600">+1 519-981-6600</a></p>
-        <p><strong>Location:</strong> Calgary, Alberta, Canada</p>
-        <p>For inquiries or quotes, feel free to reach out by phone or email. Our team is ready to assist you with your construction and renovation needs.</p>
     </div>
+</header>
 
-    <footer>
+<main class="section">
+    <div class="container two-column">
+        <div>
+            <h1>Contact Devam Construction</h1>
+            <p>
+                Share a few details about your project and we&apos;ll get back to you
+                as soon as possible with next steps.
+            </p>
+            <form class="contact-form">
+                <label>
+                    Name
+                    <input type="text" name="name" placeholder="Your full name">
+                </label>
+                <label>
+                    Email
+                    <input type="email" name="email" placeholder="you@example.com">
+                </label>
+                <label>
+                    Phone
+                    <input type="tel" name="phone" placeholder="(xxx) xxx-xxxx">
+                </label>
+                <label>
+                    Project Type
+                    <select name="project">
+                        <option value="">Select an option</option>
+                        <option value="deck">Deck / outdoor space</option>
+                        <option value="basement">Basement development</option>
+                        <option value="garage">Garage</option>
+                        <option value="windows">Windows / doors</option>
+                        <option value="renovation">Home renovation</option>
+                        <option value="other">Other</option>
+                    </select>
+                </label>
+                <label>
+                    Project Details
+                    <textarea name="details" rows="5" placeholder="Tell us about your project, location and timeline."></textarea>
+                </label>
+                <button type="submit" class="btn-primary full-width">Submit (form demo only)</button>
+            </form>
+        </div>
+        <aside class="info-card">
+            <h3>Contact Details</h3>
+            <p class="info-text">
+                Calgary, Alberta<br>
+                Phone: (xxx) xxx-xxxx<br>
+                Email: info@devam.ca
+            </p>
+            <p class="info-text small">
+                For faster replies, include photos or measurements when you reach
+                out by email.
+            </p>
+        </aside>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-bottom">
         <p>&copy; 2025 Devam Construction. All rights reserved.</p>
-    </footer>
+    </div>
+</footer>
 </body>
 </html>
