@@ -7,50 +7,64 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Devam Construction</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about/index.html">About</a></li>
-                    <li><a href="services/index.html">Services</a></li>
-                    <li><a href="gallery.html" class="active">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+<header class="site-header">
+    <div class="container nav-container">
+        <div class="logo">
+            <span class="logo-main">Devam</span>
+            <span class="logo-sub">Construction</span>
         </div>
-    </header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about/index.html">About</a></li>
+                <li><a href="services/index.html">Services</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html" class="btn-nav">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <main class="container">
-        <h2>Project Gallery</h2>
-        <p>Have a look at some of our recent projects in Calgary and surrounding areas.</p>
+<main class="section">
+    <div class="container">
+        <header class="section-header">
+            <h1>Project Gallery</h1>
+            <p>A look at some of our recent construction and renovation work.</p>
+        </header>
 
         <div class="slider">
             <div class="slides">
+
                 <!-- Slide 1 -->
                 <div class="slide active">
                     <img src="images/IMG_5380.jpeg" alt="Window installation project">
-                    <p class="caption">Window installation – clean finish and energy-efficient upgrade.</p>
+                    <p class="caption">Window installation with clean exterior finishing.</p>
                 </div>
 
-                <!-- Slide 2 – change the file names to your other images -->
+                <!-- Slide 2 -->
                 <div class="slide">
                     <img src="images/deck1.jpg" alt="Deck construction">
-                    <p class="caption">Custom-built deck for outdoor living.</p>
+                    <p class="caption">Custom backyard deck for outdoor living.</p>
                 </div>
 
                 <!-- Slide 3 -->
                 <div class="slide">
                     <img src="images/basement1.jpg" alt="Basement renovation">
-                    <p class="caption">Finished basement with modern lighting.</p>
+                    <p class="caption">Basement development with new flooring and lighting.</p>
                 </div>
 
                 <!-- Slide 4 -->
                 <div class="slide">
                     <img src="images/garage1.jpg" alt="Garage build">
-                    <p class="caption">New detached garage construction.</p>
+                    <p class="caption">New detached garage with storage space.</p>
                 </div>
+
+                <!-- Slide 5 – NEW Garage Photo -->
+                <div class="slide">
+                    <img src="images/IMG_0164.jpeg" alt="Garage construction project">
+                    <p class="caption">Garage construction project – clean, strong framing and finish.</p>
+                </div>
+
             </div>
 
             <!-- Prev / Next buttons -->
@@ -63,58 +77,50 @@
                 <span class="dot" data-slide="1"></span>
                 <span class="dot" data-slide="2"></span>
                 <span class="dot" data-slide="3"></span>
+                <span class="dot" data-slide="4"></span>
             </div>
         </div>
-    </main>
+    </div>
+</main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Devam Construction. All rights reserved.</p>
-        </div>
-    </footer>
+<footer class="site-footer">
+    <div class="footer-bottom">
+        <p>&copy; 2025 Devam Construction. All rights reserved.</p>
+    </div>
+</footer>
 
-    <script>
-        // Simple slider script
-        const slides = document.querySelectorAll('.slide');
-        const dots = document.querySelectorAll('.dot');
-        const prevBtn = document.querySelector('.prev');
-        const nextBtn = document.querySelector('.next');
+<script>
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let currentSlide = 0;
 
-        let currentSlide = 0;
+    function showSlide(index) {
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+        currentSlide = index;
 
-        function showSlide(index) {
-            if (index < 0) index = slides.length - 1;
-            if (index >= slides.length) index = 0;
-            currentSlide = index;
-
-            slides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === currentSlide);
-            });
-
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === currentSlide);
-            });
-        }
-
-        prevBtn.addEventListener('click', () => {
-            showSlide(currentSlide - 1);
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === currentSlide);
         });
 
-        nextBtn.addEventListener('click', () => {
-            showSlide(currentSlide + 1);
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentSlide);
         });
+    }
 
-        dots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                const index = parseInt(dot.getAttribute('data-slide'), 10);
-                showSlide(index);
-            });
+    prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+    nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            const index = parseInt(dot.getAttribute('data-slide'), 10);
+            showSlide(index);
         });
+    });
 
-        // Auto-slide every 5 seconds
-        setInterval(() => {
-            showSlide(currentSlide + 1);
-        }, 5000);
-    </script>
+    setInterval(() => showSlide(currentSlide + 1), 5000);
+</script>
 </body>
 </html>
