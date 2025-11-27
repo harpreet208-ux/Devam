@@ -3,74 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devam Construction - Calgary, Alberta</title>
+    <title>Devam Construction - Calgary Renovations</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Devam Construction</h1>
-            <nav>
-                <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+<header class="site-header">
+    <div class="container nav-container">
+        <div class="logo">
+            <span class="logo-main">Devam</span>
+            <span class="logo-sub">Construction</span>
         </div>
-    </header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about/index.html">About</a></li>
+                <li><a href="services/index.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="btn-nav">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
+<main>
+    <!-- Hero -->
     <section class="hero">
-        <div class="container">
-            <h2>Your Trusted Construction Experts in Calgary</h2>
-            <p>Specializing in basements, windows, decks, and garrison making. Licensed and legal work.</p>
-        </div>
-    </section>
-
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="service-list">
-                <div class="service">
-                    <h3>Basement Renovations</h3>
-                    <p>1-room and 2-room basement renovations done legally and efficiently.</p>
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <h1>Quality Construction & Renovations in Calgary</h1>
+                <p>
+                    Devam Construction is a Calgary-based team of skilled professionals
+                    specializing in decks, garages, basements, window installation and
+                    full home renovations.
+                </p>
+                <div class="hero-actions">
+                    <a href="contact.html" class="btn-primary">Request a Free Quote</a>
+                    <a href="services/index.html" class="btn-secondary">View Services</a>
                 </div>
-                <div class="service">
-                    <h3>Window Installation & Repair</h3>
-                    <p>Professional window installation and repair for residential homes.</p>
+                <ul class="hero-highlights">
+                    <li>Licensed & insured</li>
+                    <li>Residential & light commercial</li>
+                    <li>Serving Calgary and surrounding areas</li>
+                </ul>
+            </div>
+            <div class="hero-card">
+                <h2>Calgary Renovation Specialists</h2>
+                <p>
+                    From concept to completion, we focus on workmanship, clear
+                    communication and clean job sites.
+                </p>
+                <div class="hero-stat-row">
+                    <div class="hero-stat">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Years experience*</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">Decks</span>
+                        <span class="stat-label">Custom builds</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">Basements</span>
+                        <span class="stat-label">Finished & legal suites</span>
+                    </div>
                 </div>
-                <div class="service">
-                    <h3>Deck Installation</h3>
-                    <p>Custom decks built to enhance your outdoor living space.</p>
-                </div>
-                <div class="service">
-                    <h3>Garrison Making</h3>
-                    <p>Durable and precise garrison construction for homes.</p>
-                </div>
+                <p class="hero-note">*Combined team experience</p>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about">
+    <!-- Services preview -->
+    <section class="section">
         <div class="container">
-            <h2>About Devam Construction</h2>
-            <p>Based in Calgary, Alberta, Devam Construction is dedicated to quality workmanship and customer satisfaction. Licensed and insured, we handle all projects legally and professionally.</p>
+            <header class="section-header">
+                <h2>What We Build</h2>
+                <p>Practical, durable and clean finishes tailored to your home.</p>
+            </header>
+
+            <div class="card-grid">
+                <article class="card">
+                    <h3>Decks & Outdoor Spaces</h3>
+                    <p>
+                        Pressure-treated, composite or cedar decks built for Calgary’s
+                        climate, including railings, stairs and privacy walls.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Basement Development</h3>
+                    <p>
+                        From framing to finishes—family rooms, bedrooms, bathrooms and
+                        legal secondary suites.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Garages & Additions</h3>
+                    <p>
+                        Detached garages, extensions and small additions with proper
+                        concrete, framing and finishes.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Window & Door Installation</h3>
+                    <p>
+                        Energy-efficient window and door upgrades with clean interior and
+                        exterior finishing.
+                    </p>
+                </article>
+            </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Email: <a href="mailto:harpreet208@gmail.com">harpreet208@gmail.com</a></p>
-            <p>Phone: <a href="tel:+15199816600">519-981-6600</a></p>
-            <p>Location: Calgary, Alberta, Canada</p>
+    <!-- Call to action -->
+    <section class="section section-accent">
+        <div class="container cta-row">
+            <div>
+                <h2>Ready to start your project?</h2>
+                <p>
+                    Share a few details about your project and we&apos;ll follow up with
+                    a free, no-obligation quote.
+                </p>
+            </div>
+            <a href="contact.html" class="btn-primary">Contact Devam Construction</a>
         </div>
     </section>
+</main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Devam Construction. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
-</html>  
+<footer class="site-footer">
+    <div class="container footer-gri
