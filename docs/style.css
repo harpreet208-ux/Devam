@@ -36,8 +36,16 @@ h1, h2, h3, h4 {
     color: #0f172a;
 }
 
+/* Make body text easy to read everywhere */
 p {
     margin: 0 0 1em;
+    font-size: 1rem;
+    color: #374151;
+}
+
+li {
+    font-size: 1rem;
+    color: #374151;
 }
 
 /* ===========================
