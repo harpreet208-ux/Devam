@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Devam Construction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="container nav-container">
+        <div class="logo">
+            <span class="logo-main">DEVAM CONSTRUCTION</span>
+            <span class="logo-sub">CALGARY, ALBERTA</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- HERO (same background as Home) -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <h1>Construction Services for Your Home</h1>
+                <p>
+                    From new decks to full basement development, we provide complete
+                    construction services for Calgary homeowners.
+                </p>
+                <div class="hero-actions">
+                    <a href="#service-list" class="btn-secondary">View All Services</a>
+                    <a href="contact.html" class="btn-primary">Request a Quote</a>
+                </div>
+            </div>
+            <aside class="hero-card">
+                <h2>Home Upgrades Made Simple</h2>
+                <p>One team to plan, build, and finish your project.</p>
+                <div class="hero-stat-row">
+                    <div class="hero-stat">
+                        <div class="stat-number">Decks</div>
+                        <div class="stat-label">& Outdoor Spaces</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="stat-number">Basements</div>
+                        <div class="stat-label">& Garages</div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- SERVICES LIST -->
+    <section class="section" id="service-list">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Main Services</h2>
+                <p>
+                    Practical, long-lasting work designed for Calgary homes and weather.
+                </p>
+            </div>
+
+            <div class="card-grid">
+                <article class="card">
+                    <h3>Decks & Outdoor Living</h3>
+                    <p>
+                        Custom decks and outdoor spaces built for Alberta’s seasons, with
+                        safe, sturdy framing and clean finishing.
+                    </p>
+                    <ul class="info-list">
+                        <li>Pressure-treated & composite decks</li>
+                        <li>Steps, railings, and privacy screens</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3>Garages (Attached & Detached)</h3>
+                    <p>
+                        New garages or upgrades to existing ones, including concrete pads,
+                        framing, doors, and insulation.
+                    </p>
+                    <ul class="info-list">
+                        <li>Single & double garages</li>
+                        <li>Storage and workshop options</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3>Basement Development</h3>
+                    <p>
+                        Turn an empty basement into a comfortable living area, extra
+                        bedroom, or rental suite (where permitted).
+                    </p>
+                    <ul class="info-list">
+                        <li>Framing, drywall, and flooring</li>
+                        <li>Kitchenette, bathroom, and lighting</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3>Home Renovations</h3>
+                    <p>
+                        Interior updates that improve daily life: better layouts, fresh
+                        finishes, and practical changes that add value.
+                    </p>
+                    <ul class="info-list">
+                        <li>Kitchen and living area updates</li>
+                        <li>Doors, trim, and feature walls</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3>Windows & Doors</h3>
+                    <p>
+                        Installations that improve comfort and efficiency while matching the
+                        look of your home.
+                    </p>
+                    <ul class="info-list">
+                        <li>New and replacement units</li>
+                        <li>Exterior and interior doors</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3>Custom Projects</h3>
+                    <p>
+                        Have a unique idea for your space? We can help plan and build a
+                        custom solution for your property.
+                    </p>
+                    <ul class="info-list">
+                        <li>Discuss your ideas with us</li>
+                        <li>We’ll give honest feedback and options</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-bottom">
+        © <span id="year-services"></span> Devam Construction · Calgary, Alberta
+    </div>
+    <script>
+        document.getElementById('year-services').textContent = new Date().getFullYear();
+    </script>
+</footer>
+</body>
+</html>
