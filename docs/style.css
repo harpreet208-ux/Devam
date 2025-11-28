@@ -76,7 +76,7 @@ p {
     position: sticky;
     top: 0;
     z-index: 50;
-    background: #ffffff; /* LIGHT header */
+    background: #ffffff;
     border-bottom: 1px solid #e5e7eb;
 }
 
@@ -105,7 +105,7 @@ p {
     font-size: 0.8rem;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: #f59e0b; /* orange accent */
+    color: #f59e0b;
 }
 
 .nav-links {
@@ -118,7 +118,7 @@ p {
 
 .nav-links a {
     font-size: 0.95rem;
-    color: #374151; 
+    color: #374151;
     font-weight: 500;
     position: relative;
     padding: 4px 0;
@@ -131,7 +131,7 @@ p {
     bottom: -4px;
     width: 0;
     height: 2px;
-    background: #f59e0b; /* orange accent */
+    background: #f59e0b;
     border-radius: 999px;
     transition: width 0.18s ease;
 }
@@ -162,7 +162,7 @@ p {
 .hero {
     position: relative;
     padding: 0;
-    background-image: url("images/hero.jpg"); /* change to your file */
+    background-image: url("docs/images/IMG_4483.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -300,7 +300,7 @@ p {
 }
 
 /* ===========================
-   Two Column (About Preview)
+   About Preview
 =========================== */
 
 .two-column {
