@@ -49,9 +49,10 @@
         </div>
     </section>
 
-    <!-- CONTACT DETAILS -->
+    <!-- CONTACT DETAILS + FORM -->
     <section class="section" id="contact-details">
         <div class="container two-column">
+            <!-- Left: contact info -->
             <div>
                 <h2>How to Reach Us</h2>
                 <p>
@@ -60,18 +61,43 @@
                 </p>
                 <ul class="info-list">
                     <li><strong>Location:</strong> Calgary, Alberta, Canada</li>
-                    <li><strong>Phone:</strong> (add your phone number here)</li>
-                    <li><strong>Email:</strong> (add your email address here)</li>
+                    <li><strong>Phone:</strong> 519-981-6600</li>
+                    <li><strong>Email:</strong> <a href="mailto:harpreet208@gmail.com">harpreet208@gmail.com</a></li>
                 </ul>
             </div>
+
+            <!-- Right: quote form -->
             <div class="info-card">
-                <h3>Quick Project Info</h3>
-                <ul class="info-list">
-                    <li>Type of project (deck, garage, basement, renovation)</li>
-                    <li>Approximate size and current condition</li>
-                    <li>Photos, if available (you can email them)</li>
-                    <li>Any budget or timing you’d like us to consider</li>
-                </ul>
+                <h3>Get a Free Quote</h3>
+                <form
+                    class="contact-form"
+                    action="https://formspree.io/f/xzzlglwn"
+                    method="POST"
+                >
+                    <div class="form-field">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="phone">Phone</label>
+                        <input id="phone" name="phone" type="tel" value="519-981-6600">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="project">Project Details</label>
+                        <textarea id="project" name="project" placeholder="Deck, garage, basement, renovation..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-block">
+                        Get a Free Quote
+                    </button>
+                </form>
             </div>
         </div>
     </section>
