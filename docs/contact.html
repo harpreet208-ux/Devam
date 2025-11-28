@@ -3,101 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Devam Construction</title>
+    <title>Contact Devam Construction - Free Quote</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="site-header">
     <div class="container nav-container">
         <div class="logo">
-            <span class="logo-main">Devam</span>
-            <span class="logo-sub">Construction</span>
+            <span class="logo-main">DEVAM CONSTRUCTION</span>
+            <span class="logo-sub">CALGARY, ALBERTA</span>
         </div>
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about/index.html">About</a></li>
-                <li><a href="services/index.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html" class="active btn-nav">Contact</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<main class="section">
-    <div class="container two-column">
-        <div>
-            <h1>Contact Devam Construction</h1>
-            <p>
-                Share a few details about your project and we&apos;ll get back to you
-                as soon as possible with next steps.
-            </p>
-
-            <!-- Contact form connected to Formspree -->
-            <form class="contact-form"
-                  action="https://formspree.io/f/xzzlglwn"
-                  method="POST">
-                  
-                <label>
-                    Name
-                    <input type="text" name="name" placeholder="Your full name" required>
-                </label>
-
-                <label>
-                    Email
-                    <input type="email" name="email" placeholder="harpreet208@gmail.com" required>
-                </label>
-
-                <label>
-                    Phone
-                    <input type="tel" name="phone" placeholder="519-981-6600">
-                </label>
-
-                <label>
-                    Project Type
-                    <select name="project">
-                        <option value="">Select an option</option>
-                        <option value="deck">Deck / outdoor space</option>
-                        <option value="basement">Basement development</option>
-                        <option value="garage">Garage</option>
-                        <option value="windows">Windows / doors</option>
-                        <option value="renovation">Home renovation</option>
-                        <option value="other">Other</option>
-                    </select>
-                </label>
-
-                <label>
-                    Project Details
-                    <textarea name="details" rows="5" placeholder="Tell us about your project, location and timeline." required></textarea>
-                </label>
-
-                <!-- Email subject for your inbox -->
-                <input type="hidden" name="_subject" value="New inquiry from Devam Construction website">
-
-                <button type="submit" class="btn-primary full-width">Submit</button>
-            </form>
+<main>
+    <!-- HERO (same background) -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <h1>Contact Devam Construction</h1>
+                <p>
+                    Ready to talk about your deck, garage, basement, or renovation
+                    project? Get in touch for a free, no-obligation quote.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact-details" class="btn-secondary">View Contact Details</a>
+                </div>
+            </div>
+            <aside class="hero-card">
+                <h2>Based in Calgary</h2>
+                <p>
+                    We work across Calgary and nearby communities. Send us a message
+                    with a few details about your project.
+                </p>
+            </aside>
         </div>
+    </section>
 
-        <aside class="info-card">
-            <h3>Contact Details</h3>
-            <p class="info-text">
-                Calgary, Alberta<br>
-                Phone: 519-981-6600<br>
-                Email: harpreet208@gmail.com
-            </p>
-            <p class="info-text small">
-                For faster replies, include photos or measurements when you reach
-                out by email.
-            </p>
-        </aside>
-    </div>
+    <!-- CONTACT DETAILS -->
+    <section class="section" id="contact-details">
+        <div class="container two-column">
+            <div>
+                <h2>How to Reach Us</h2>
+                <p>
+                    Please include your neighbourhood, type of project, and any timelines
+                    you have in mind. We’ll respond as soon as we can.
+                </p>
+                <ul class="info-list">
+                    <li><strong>Location:</strong> Calgary, Alberta, Canada</li>
+                    <li><strong>Phone:</strong> (add your phone number here)</li>
+                    <li><strong>Email:</strong> (add your email address here)</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>Quick Project Info</h3>
+                <ul class="info-list">
+                    <li>Type of project (deck, garage, basement, renovation)</li>
+                    <li>Approximate size and current condition</li>
+                    <li>Photos, if available (you can email them)</li>
+                    <li>Any budget or timing you’d like us to consider</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </main>
 
 <footer class="site-footer">
-    <div class="footer-bottom">
-        <p>&copy; 2025 Devam Construction. All rights reserved.</p>
+    <div class="container footer-bottom">
+        © <span id="year-contact"></span> Devam Construction · Calgary, Alberta
     </div>
+    <script>
+        document.getElementById('year-contact').textContent = new Date().getFullYear();
+    </script>
 </footer>
 </body>
 </html>
