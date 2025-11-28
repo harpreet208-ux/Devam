@@ -170,7 +170,7 @@ li {
 .hero {
     position: relative;
     padding: 0;
-    background-image: url("docs/images/IMG_4483.jpeg");
+    background-image: url("images/IMG_4483.jpeg"); /* ✅ FIXED PATH */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
