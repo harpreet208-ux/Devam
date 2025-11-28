@@ -3,63 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Devam Construction | Calgary Construction Specialists</title>
-
-    <meta name="title" content="About Devam Construction | Calgary Construction Specialists">
-    <meta name="description" content="Learn about Devam Construction, a Calgary-based contractor specializing in decks, garages, basements, renovations, and window installations. Professional, experienced, and reliable.">
-    <meta name="keywords" content="construction company Calgary, contractor Calgary, renovations Calgary, decks Calgary, garages Calgary">
-    <meta name="author" content="Devam Construction">
-
-    <link rel="stylesheet" href="../style.css">
+    <title>About Devam Construction - Calgary, Alberta</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
 <header class="site-header">
     <div class="container nav-container">
         <div class="logo">
-            <span class="logo-main">Devam</span>
-            <span class="logo-sub">Construction</span>
+            <span class="logo-main">DEVAM CONSTRUCTION</span>
+            <span class="logo-sub">CALGARY, ALBERTA</span>
         </div>
-
         <nav>
             <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a class="active btn-nav" href="index.html">About</a></li>
-                <li><a href="../services/index.html">Services</a></li>
-                <li><a href="../gallery.html">Gallery</a></li>
-                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<main class="section">
-    <div class="container two-column">
-
-        <div>
-            <h1>About Devam Construction</h1>
-            <p>We are a Calgary-based group of construction professionals with experience in deck building, garage construction, basement development, windows and doors installation, and full home renovation projects.</p>
+<main>
+    <!-- HERO (same background) -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <h1>About Devam Construction</h1>
+                <p>
+                    We are a group of experienced professionals in Calgary, Alberta,
+                    focused on building decks, garages, basements, and full home
+                    renovations with care and craftsmanship.
+                </p>
+                <div class="hero-actions">
+                    <a href="services.html" class="btn-secondary">View Our Services</a>
+                    <a href="contact.html" class="btn-primary">Get a Free Quote</a>
+                </div>
+            </div>
+            <aside class="hero-card">
+                <h2>Built on Trust & Quality</h2>
+                <p>
+                    From the first visit to the final clean-up, we treat your home as our own.
+                </p>
+                <div class="hero-stat-row">
+                    <div class="hero-stat">
+                        <div class="stat-number">Local</div>
+                        <div class="stat-label">Calgary Company</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="stat-number">Licensed</div>
+                        <div class="stat-label">& Insured</div>
+                    </div>
+                </div>
+            </aside>
         </div>
+    </section>
 
-        <aside class="info-card">
-            <h3>Our Values</h3>
-            <ul class="info-list">
-                <li>Quality workmanship</li>
-                <li>Honest pricing</li>
-                <li>Reliable communication</li>
-                <li>Professional service</li>
-            </ul>
-        </aside>
-
-    </div>
+    <!-- MAIN CONTENT -->
+    <section class="section">
+        <div class="container two-column">
+            <div>
+                <h2>Who We Are</h2>
+                <p>
+                    Devam Construction is a Calgary-based construction company dedicated
+                    to delivering practical, long-lasting work for homeowners. We focus on
+                    projects that improve everyday living: stronger garages, comfortable
+                    basements, better decks, and well-planned renovations.
+                </p>
+                <p>
+                    We believe in honest communication, realistic timelines, and doing the
+                    job right the first time.
+                </p>
+            </div>
+            <div class="info-card">
+                <h3>Our Values</h3>
+                <ul class="info-list">
+                    <li>Respect for your home and neighbours</li>
+                    <li>Clear pricing and written scope of work</li>
+                    <li>Attention to safety and building standards</li>
+                    <li>Friendly, professional team on site</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </main>
 
 <footer class="site-footer">
-    <div class="footer-bottom">
-        <p>&copy; 2025 Devam Construction. All rights reserved.</p>
+    <div class="container footer-bottom">
+        © <span id="year-about"></span> Devam Construction · Calgary, Alberta
     </div>
+    <script>
+        document.getElementById('year-about').textContent = new Date().getFullYear();
+    </script>
 </footer>
-
 </body>
 </html>
