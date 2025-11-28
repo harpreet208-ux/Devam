@@ -86,12 +86,21 @@
 
                     <div class="form-field">
                         <label for="phone">Phone</label>
-                        <input id="phone" name="phone" type="tel" value="519-981-6600">
+                        <!-- phone field WITHOUT pre-filled number -->
+                        <input id="phone" name="phone" type="tel">
                     </div>
 
                     <div class="form-field">
                         <label for="project">Project Details</label>
-                        <textarea id="project" name="project" placeholder="Deck, garage, basement, renovation..."></textarea>
+                        <select id="project" name="project" required>
+                            <option value="" disabled selected>Select a project type</option>
+                            <option value="deck">Deck</option>
+                            <option value="garage">Garage</option>
+                            <option value="basement">Basement</option>
+                            <option value="renovation">Home Renovation</option>
+                            <option value="windows_doors">Windows &amp; Doors</option>
+                            <option value="other">Other</option>
+                        </select>
                     </div>
 
                     <button type="submit" class="btn-primary btn-block">
