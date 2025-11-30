@@ -11,23 +11,26 @@
     <meta name="keywords" content="construction Calgary, deck builder Calgary, garage builder Calgary, basement development Calgary, home renovation Calgary, window installation Calgary, contractor Calgary">
     <meta name="author" content="Devam Construction">
 
+    <!-- Preload + stylesheet (small speed help) -->
+    <link rel="preload" href="style.css" as="style">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+<!-- Skip link for accessibility -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- HEADER -->
-<header class="site-header">
+<header class="site-header" role="banner">
     <div class="container nav-container">
         <div class="logo">
-            <span class="logo-main">Devam</span>
-            <span class="logo-sub">Construction</span>
+            <span class="logo-main">DEVAM</span>
+            <span class="logo-sub">CONSTRUCTION</span>
         </div>
 
-        <nav>
+        <nav aria-label="Main navigation">
             <ul class="nav-links">
                 <li><a href="index.html" class="active btn-nav">Home</a></li>
-                <!-- FIXED PATHS HERE -->
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
@@ -37,119 +40,128 @@
     </div>
 </header>
 
-<!-- HERO SECTION -->
-<section class="hero">
-    <div class="container hero-grid">
-        <div class="hero-text">
-            <h1>Quality Construction Services in Calgary</h1>
-            <p>We build decks, garages, basements, windows, doors, and full home renovations with professional workmanship you can trust.</p>
+<!-- MAIN LANDMARK -->
+<main id="main-content">
 
-            <!-- ONLY ONE BUTTON REMAINS -->
-            <div class="hero-actions">
-                <a class="btn-primary" href="contact.html">Get a Free Quote</a>
-            </div>
+    <!-- HERO SECTION (LCP image in HTML) -->
+    <section class="hero">
+        <!-- LCP IMAGE: eager + high priority for better performance -->
+        <img
+            src="docs/images/IMG_4483.jpeg"
+            alt="Completed construction project by Devam Construction in Calgary"
+            class="hero-bg"
+            loading="eager"
+            fetchpriority="high"
+        >
 
-            <ul class="hero-highlights">
-                <li>Decks & Outdoor Spaces</li>
-                <li>Garages (Attached & Detached)</li>
-                <li>Basement Development</li>
-                <li>Windows & Doors</li>
-                <li>Home Renovation</li>
-            </ul>
-        </div>
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <h1>Quality Construction Services in Calgary</h1>
+                <p>We build decks, garages, basements, windows, doors, and full home renovations with professional workmanship you can trust.</p>
 
-        <div class="hero-card">
-            <h2>Why Choose Devam Construction?</h2>
-            <p>We deliver reliable, clean, and high-quality work from start to finish.</p>
-
-            <div class="hero-stat-row">
-                <div class="hero-stat">
-                    <span class="stat-number">100%+</span>
-                    <span class="stat-label">Client Satisfaction</span>
+                <div class="hero-actions">
+                    <a class="btn-primary" href="contact.html">Get a Free Quote</a>
                 </div>
-                <div class="hero-stat">
-                    <span class="stat-number">10+ Years</span>
-                    <span class="stat-label">Experience</span>
+
+                <ul class="hero-highlights" aria-label="Main construction services">
+                    <li>Decks &amp; Outdoor Spaces</li>
+                    <li>Garages (Attached &amp; Detached)</li>
+                    <li>Basement Development</li>
+                    <li>Windows &amp; Doors</li>
+                    <li>Home Renovations</li>
+                </ul>
+            </div>
+
+            <aside class="hero-card" aria-label="Why choose Devam Construction">
+                <h2>Why Choose Devam Construction?</h2>
+                <p>We deliver reliable, clean, and high-quality work from start to finish.</p>
+
+                <div class="hero-stat-row">
+                    <div class="hero-stat">
+                        <span class="stat-number">100%+</span>
+                        <span class="stat-label">Client Satisfaction</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">10+ Years</span>
+                        <span class="stat-label">Experience</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">Calgary</span>
+                        <span class="stat-label">Local Business</span>
+                    </div>
                 </div>
-                <div class="hero-stat">
-                    <span class="stat-number">Calgary</span>
-                    <span class="stat-label">Local Business</span>
-                </div>
-            </div>
 
-            <span class="hero-note">Licensed • Insured • Professional</span>
+                <span class="hero-note">Licensed • Insured • Professional</span>
+            </aside>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- ABOUT PREVIEW -->
-<section class="section">
-    <div class="container two-column">
-        <div>
-            <h2>About Devam Construction</h2>
-            <p>We are a Calgary-based construction company specializing in decks, garages, basement development, window installations, and home renovation projects. Our mission is to deliver high-quality craftsmanship at fair and honest pricing. Whether you're upgrading your home or building new features, we bring strong attention to detail and professional service.</p>
-            
-            <!-- LEARN MORE BUTTON REMOVED -->
-        </div>
-
-        <div class="info-card">
-            <h3>What We Deliver</h3>
-            <ul class="info-list">
-                <li>Professional workmanship</li>
-                <li>On-time project completion</li>
-                <li>Honest & transparent pricing</li>
-                <li>Clean, reliable service</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<!-- SERVICES PREVIEW -->
-<section class="section">
-    <div class="container">
-        <header class="section-header">
-            <h2>Our Services</h2>
-            <p>Construction services built with care and precision.</p>
-        </header>
-
-        <div class="card-grid">
-            <div class="card">
-                <h3>Deck Building</h3>
-                <p>Beautiful, durable outdoor decks built to match your home perfectly.</p>
+    <!-- ABOUT PREVIEW -->
+    <section class="section" aria-labelledby="about-preview-heading">
+        <div class="container two-column">
+            <div>
+                <h2 id="about-preview-heading">About Devam Construction</h2>
+                <p>We are a Calgary-based construction company specializing in decks, garages, basement development, window installations, and home renovation projects. Our mission is to deliver high-quality craftsmanship at fair and honest pricing. Whether you're upgrading your home or building new features, we bring strong attention to detail and professional service.</p>
             </div>
 
-            <div class="card">
-                <h3>Garage Construction</h3>
-                <p>Attached or detached garages with strong framing and clean finishes.</p>
-            </div>
-
-            <div class="card">
-                <h3>Basement Development</h3>
-                <p>Complete basement finishing including framing, drywall, flooring, and electrical.</p>
-            </div>
-
-            <div class="card">
-                <h3>Home Renovations</h3>
-                <p>Interior and exterior renovations to upgrade your entire home.</p>
-            </div>
-
-            <div class="card">
-                <h3>Windows & Doors</h3>
-                <p>Professional installation for improved energy efficiency and aesthetics.</p>
+            <div class="info-card">
+                <h3>What We Deliver</h3>
+                <ul class="info-list">
+                    <li>Professional workmanship</li>
+                    <li>On-time project completion</li>
+                    <li>Honest &amp; transparent pricing</li>
+                    <li>Clean, reliable service</li>
+                </ul>
             </div>
         </div>
+    </section>
 
-        <!-- REMOVED 'SEE ALL SERVICES' BUTTON -->
-    </div>
-</section>
+    <!-- SERVICES PREVIEW -->
+    <section class="section" aria-labelledby="services-heading">
+        <div class="container">
+            <header class="section-header">
+                <h2 id="services-heading">Our Services</h2>
+                <p>Construction services built with care and precision.</p>
+            </header>
 
-<!-- CALL TO ACTION -->
-<section class="section-accent">
-    <div class="container cta-row">
-        <h2>Ready to Start Your Project?</h2>
-        <a class="btn-primary" href="contact.html">Request a Quote</a>
-    </div>
-</section>
+            <div class="card-grid">
+                <article class="card">
+                    <h3>Deck Building</h3>
+                    <p>Beautiful, durable outdoor decks built to match your home perfectly.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Garage Construction</h3>
+                    <p>Attached or detached garages with strong framing and clean finishes.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Basement Development</h3>
+                    <p>Complete basement finishing including framing, drywall, flooring, and electrical.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Home Renovations</h3>
+                    <p>Interior and exterior renovations to upgrade your entire home.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Windows &amp; Doors</h3>
+                    <p>Professional installation for improved energy efficiency and aesthetics.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="section-accent">
+        <div class="container cta-row">
+            <h2>Ready to Start Your Project?</h2>
+            <a class="btn-primary" href="contact.html">Request a Quote</a>
+        </div>
+    </section>
+
+</main>
 
 <!-- FOOTER -->
 <footer class="site-footer">
