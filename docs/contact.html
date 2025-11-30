@@ -3,17 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Devam Construction - Free Quote</title>
+    <title>Contact | Devam Construction | Calgary Decks, Garages, Basements & Renovations</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Contact Devam Construction in Calgary for a free quote on decks, garages, basements, windows, doors, and home renovations.">
+    <meta name="keywords" content="contact Devam Construction, construction quote Calgary, deck quote, garage builder contact, renovation quote Calgary">
+    <meta name="author" content="Devam Construction">
+
+    <link rel="preload" href="style.css" as="style">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<!-- Skip link -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- HEADER -->
 <header class="site-header">
     <div class="container nav-container">
         <div class="logo">
-            <span class="logo-main">DEVAM CONSTRUCTION</span>
-            <span class="logo-sub">CALGARY, ALBERTA</span>
+            <span class="logo-main">DEVAM</span>
+            <span class="logo-sub">CONSTRUCTION</span>
         </div>
-        <nav>
+        <nav aria-label="Main navigation">
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -25,25 +37,35 @@
     </div>
 </header>
 
-<main>
-    <!-- HERO (same background) -->
+<main id="main-content">
+
+    <!-- HERO with background image -->
     <section class="hero">
+        <img
+            src="images/IMG_4483.jpg"
+            alt="Construction work in Calgary by Devam Construction"
+            class="hero-bg"
+            loading="eager"
+            fetchpriority="high"
+        >
+
         <div class="container hero-grid">
             <div class="hero-text">
                 <h1>Contact Devam Construction</h1>
                 <p>
-                    Ready to talk about your deck, garage, basement, or renovation
-                    project? Get in touch for a free, no-obligation quote.
+                    Ready to talk about your deck, garage, basement, windows, doors,
+                    or renovation project? Get in touch for a free, no-obligation quote.
                 </p>
                 <div class="hero-actions">
                     <a href="#contact-details" class="btn-secondary">View Contact Details</a>
                 </div>
             </div>
+
             <aside class="hero-card">
                 <h2>Based in Calgary</h2>
                 <p>
                     We work across Calgary and nearby communities. Send us a message
-                    with a few details about your project.
+                    with a few details about your project and we’ll respond as soon as we can.
                 </p>
             </aside>
         </div>
@@ -52,12 +74,13 @@
     <!-- CONTACT DETAILS + FORM -->
     <section class="section" id="contact-details">
         <div class="container two-column">
+
             <!-- Left: contact info -->
             <div>
                 <h2>How to Reach Us</h2>
                 <p>
                     Please include your neighbourhood, type of project, and any timelines
-                    you have in mind. We’ll respond as soon as we can.
+                    you have in mind. We’ll respond as soon as we can with next steps.
                 </p>
                 <ul class="info-list">
                     <li><strong>Location:</strong> Calgary, Alberta, Canada</li>
@@ -86,12 +109,11 @@
 
                     <div class="form-field">
                         <label for="phone">Phone</label>
-                        <!-- phone field WITHOUT pre-filled number -->
                         <input id="phone" name="phone" type="tel">
                     </div>
 
                     <div class="form-field">
-                        <label for="project">Project Details</label>
+                        <label for="project">Project Type</label>
                         <select id="project" name="project" required>
                             <option value="" disabled selected>Select a project type</option>
                             <option value="deck">Deck</option>
@@ -103,7 +125,7 @@
                         </select>
                     </div>
 
-                    <button type="submit" class="btn-primary btn-block">
+                    <button type="submit" class="btn-primary">
                         Get a Free Quote
                     </button>
                 </form>
@@ -112,6 +134,7 @@
     </section>
 </main>
 
+<!-- FOOTER -->
 <footer class="site-footer">
     <div class="container footer-bottom">
         © <span id="year-contact"></span> Devam Construction · Calgary, Alberta
@@ -120,5 +143,6 @@
         document.getElementById('year-contact').textContent = new Date().getFullYear();
     </script>
 </footer>
+
 </body>
 </html>
