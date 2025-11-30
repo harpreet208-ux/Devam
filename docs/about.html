@@ -4,19 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Devam Construction - Calgary, Alberta</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Learn about Devam Construction, a Calgary-based construction company specializing in decks, garages, basements, windows, doors, and home renovations.">
+    <meta name="author" content="Devam Construction">
+
+    <!-- CSS -->
+    <link rel="preload" href="style.css" as="style">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="site-header">
+
+<!-- Skip link -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- HEADER -->
+<header class="site-header" role="banner">
     <div class="container nav-container">
         <div class="logo">
-            <span class="logo-main">DEVAM CONSTRUCTION</span>
-            <span class="logo-sub">CALGARY, ALBERTA</span>
+            <span class="logo-main">DEVAM</span>
+            <span class="logo-sub">CONSTRUCTION</span>
         </div>
-        <nav>
+        <nav aria-label="Main navigation">
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active btn-nav">About</a></li>
+                <li><a href="about.html" class="active">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -25,26 +37,39 @@
     </div>
 </header>
 
-<main>
-    <!-- HERO (same background as Home) -->
+<!-- MAIN -->
+<main id="main-content">
+
+    <!-- HERO with same background as Home -->
     <section class="hero">
+        <!-- hero background image -->
+        <img
+            src="images/IMG_4483.jpg"
+            alt="Construction work by Devam Construction in Calgary"
+            class="hero-bg"
+            loading="eager"
+            fetchpriority="high"
+        >
+
         <div class="container hero-grid">
             <div class="hero-text">
                 <h1>About Devam Construction</h1>
                 <p>
-                    We are a group of experienced professionals in Calgary, Alberta,
-                    focused on building decks, garages, basements, and full home
-                    renovations with care and craftsmanship.
+                    We are a Calgary-based construction company focused on building
+                    decks, garages, basements, windows, doors, and full home
+                    renovations with care, safety, and solid craftsmanship.
                 </p>
                 <div class="hero-actions">
                     <a href="services.html" class="btn-secondary">View Our Services</a>
                     <a href="contact.html" class="btn-primary">Get a Free Quote</a>
                 </div>
             </div>
-            <aside class="hero-card">
-                <h2>Built on Trust & Quality</h2>
+
+            <aside class="hero-card" aria-label="About Devam Construction">
+                <h2>Built on Trust &amp; Quality</h2>
                 <p>
                     From the first visit to the final clean-up, we treat your home as our own.
+                    We focus on honest communication, clean job sites, and dependable results.
                 </p>
                 <div class="hero-stat-row">
                     <div class="hero-stat">
@@ -53,9 +78,10 @@
                     </div>
                     <div class="hero-stat">
                         <div class="stat-number">Licensed</div>
-                        <div class="stat-label">& Insured</div>
+                        <div class="stat-label">&amp; Insured</div>
                     </div>
                 </div>
+                <span class="hero-note">Professional • Reliable • Detail-focused</span>
             </aside>
         </div>
     </section>
@@ -87,15 +113,18 @@
             </div>
         </div>
     </section>
+
 </main>
 
+<!-- FOOTER -->
 <footer class="site-footer">
-    <div class="container footer-bottom">
-        © <span id="year-about"></span> Devam Construction · Calgary, Alberta
+    <div class="footer-bottom">
+        &copy; <span id="year-about"></span> Devam Construction · Calgary, Alberta
     </div>
     <script>
         document.getElementById('year-about').textContent = new Date().getFullYear();
     </script>
 </footer>
+
 </body>
 </html>
