@@ -36,7 +36,6 @@ h1, h2, h3, h4 {
     color: #0f172a;
 }
 
-/* Make body text easy to read everywhere */
 p {
     margin: 0 0 1em;
     font-size: 1rem;
@@ -77,15 +76,36 @@ li {
 }
 
 /* ===========================
-   Header (LIGHT VERSION)
+   Skip Link (Accessibility)
+=========================== */
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: 8px;
+    padding: 8px 14px;
+    background: #facc15;
+    color: #111827;
+    font-weight: 600;
+    border-radius: 999px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    left: 12px;
+}
+
+/* ===========================
+   Header (High-contrast)
 =========================== */
 
 .site-header {
     position: sticky;
     top: 0;
     z-index: 50;
-    background: #ffffff;
-    border-bottom: 1px solid #e5e7eb;
+    background: #0f172a;          /* dark background for strong contrast */
+    border-bottom: 1px solid #020617;
+    color: #f9fafb;
 }
 
 .nav-container {
@@ -103,17 +123,17 @@ li {
 
 .logo-main {
     font-size: 1.4rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
+    font-weight: 800;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #0f172a;
+    color: #f9fafb;
 }
 
 .logo-sub {
     font-size: 0.8rem;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: #f59e0b;
+    color: #e5e7eb;               /* light grey on dark = good contrast */
 }
 
 .nav-links {
@@ -126,7 +146,7 @@ li {
 
 .nav-links a {
     font-size: 0.95rem;
-    color: #374151;
+    color: #e5e7eb;
     font-weight: 500;
     position: relative;
     padding: 4px 0;
@@ -139,7 +159,7 @@ li {
     bottom: -4px;
     width: 0;
     height: 2px;
-    background: #f59e0b;
+    background: #facc15;
     border-radius: 999px;
     transition: width 0.18s ease;
 }
@@ -156,11 +176,18 @@ li {
 .hero {
     position: relative;
     padding: 0;
-    background-image: url("images/IMG_4483.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     color: #ffffff;
+    overflow: hidden;
+}
+
+/* LCP background image controlled in HTML */
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 
 .hero::before {
@@ -172,10 +199,12 @@ li {
         rgba(15, 23, 42, 0.9),
         rgba(15, 23, 42, 0.65)
     );
+    z-index: 1;
 }
 
 .hero-grid {
     position: relative;
+    z-index: 2;
     display: grid;
     grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
     gap: 32px;
@@ -185,6 +214,7 @@ li {
 
 .hero-text h1 {
     font-size: clamp(2.4rem, 3.6vw, 3.2rem);
+    color: #f9fafb;
 }
 
 .hero-text p {
@@ -214,7 +244,7 @@ li {
 }
 
 .btn-primary {
-    background-color: #f59e0b;
+    background-color: #facc15;
     color: #111827;
 }
 
@@ -249,8 +279,6 @@ li {
     font-size: 0.88rem;
     padding: 6px 12px;
     border-radius: 999px;
-
-    /* more visible */
     background: rgba(255, 255, 255, 0.28);
     border: 1px solid rgba(255, 255, 255, 0.4);
     color: #ffffff;
@@ -297,6 +325,13 @@ li {
     color: #e5e7eb;
     text-transform: uppercase;
     font-size: 0.75rem;
+}
+
+.hero-note {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #e5e7eb;
 }
 
 /* ===========================
@@ -385,7 +420,7 @@ li {
 }
 
 /* ===========================
-   Footer (LIGHT VERSION)
+   Footer
 =========================== */
 
 .site-footer {
@@ -404,7 +439,6 @@ li {
    Responsive: Tablets & Mobile
 =========================== */
 
-/* Up to ~720px wide (phones + small tablets portrait) */
 @media (max-width: 720px) {
     .nav-container {
         flex-direction: column;
@@ -460,7 +494,6 @@ li {
     }
 }
 
-/* Extra small phones */
 @media (max-width: 480px) {
     .container {
         width: min(100% - 24px, 100%);
