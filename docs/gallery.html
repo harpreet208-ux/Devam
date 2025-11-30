@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Devam Construction Projects</title>
+    <title>Gallery | Devam Construction | Decks, Garages, Basements & Renovations</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Browse project photos from Devam Construction including decks, garages, basement development, renovations, and carpentry work in Calgary.">
+    <meta name="keywords" content="construction gallery Calgary, deck builder Calgary, garage builder Calgary, renovation photos, basement development Calgary">
+    <meta name="author" content="Devam Construction">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+<!-- HEADER -->
 <header class="site-header">
     <div class="container nav-container">
         <div class="logo">
-            <span class="logo-main">DEVAM CONSTRUCTION</span>
-            <span class="logo-sub">CALGARY, ALBERTA</span>
+            <span class="logo-main">DEVAM</span>
+            <span class="logo-sub">CONSTRUCTION</span>
         </div>
         <nav>
             <ul class="nav-links">
@@ -26,26 +35,31 @@
 </header>
 
 <main>
-    <!-- HERO (same background as other pages) -->
+
+    <!-- HERO with background image -->
     <section class="hero">
+        <img
+            src="images/IMG_4483.jpg"
+            alt="Construction project in Calgary by Devam Construction"
+            class="hero-bg"
+            loading="eager"
+            fetchpriority="high"
+        >
+
         <div class="container hero-grid">
             <div class="hero-text">
                 <h1>Project Gallery</h1>
-                <p>
-                    A look at some of the decks, garages, interiors, and installations
-                    completed by Devam Construction in Calgary.
-                </p>
+                <p>A showcase of completed construction projects across Calgary, including decks, garages, interiors, and custom carpentry.</p>
+
                 <div class="hero-actions">
                     <a href="contact.html" class="btn-primary">Get a Free Quote</a>
-                    <a href="services.html" class="btn-secondary">View Services</a>
+                    <a href="services.html" class="btn-secondary">Our Services</a>
                 </div>
             </div>
+
             <aside class="hero-card">
-                <h2>Real Work, Real Homes</h2>
-                <p>
-                    Every project is built with careful workmanship, clean finishing,
-                    and respect for your property.
-                </p>
+                <h2>Real Work. Real Homes.</h2>
+                <p>All photos are from actual projects completed by Devam Construction — built with clean workmanship and strong framing.</p>
             </aside>
         </div>
     </section>
@@ -55,67 +69,73 @@
         <div class="container">
             <div class="section-header">
                 <h2>Our Recent Work</h2>
-                <p>Here are a few examples of completed projects by Devam Construction.</p>
+                <p>A collection of photos showing the quality and attention to detail we bring to every project.</p>
             </div>
 
             <div class="card-grid">
-                <!-- Decks -->
+
+                <!-- Deck Projects -->
                 <article class="card">
-                    <img src="images/Deck1.JPG" alt="Deck project by Devam Construction">
+                    <img src="images/Deck1.JPG" alt="Deck built by Devam Construction">
                     <h3>Deck Project 1</h3>
-                    <p>Outdoor deck built for everyday use and Calgary weather.</p>
+                    <p>Durable outdoor deck designed for daily use and Calgary weather.</p>
                 </article>
 
                 <article class="card">
-                    <img src="images/Deck2.JPG" alt="Second deck project by Devam Construction">
+                    <img src="images/Deck2.JPG" alt="Deck renovation completed by Devam Construction">
                     <h3>Deck Project 2</h3>
-                    <p>Clean framing and finishing to extend your outdoor living space.</p>
+                    <p>Clean framing and finishing for a functional outdoor space.</p>
                 </article>
 
                 <!-- Garages -->
                 <article class="card">
-                    <img src="images/Garage2.JPG" alt="Garage project by Devam Construction">
+                    <img src="images/Garage2.JPG" alt="Detached garage constructed in Calgary">
                     <h3>Garage Project 1</h3>
-                    <p>Practical garage space built with strong structure and storage in mind.</p>
+                    <p>Strong framing and clean exterior finish for a practical garage.</p>
                 </article>
 
                 <article class="card">
-                    <img src="images/Garage3.JPG" alt="Second garage project by Devam Construction">
+                    <img src="images/Garage3.JPG" alt="Garage building project">
                     <h3>Garage Project 2</h3>
-                    <p>Upgrade to improve parking, storage, and overall curb appeal.</p>
+                    <p>Improved parking, storage, and exterior appearance.</p>
                 </article>
 
-                <!-- Interior / Renovation -->
+                <!-- Interior & Renovation -->
                 <article class="card">
-                    <img src="images/IMG_0164.jpeg" alt="Interior or renovation work by Devam Construction">
+                    <img src="images/IMG_0164.jpeg" alt="Interior renovation project">
                     <h3>Interior Work</h3>
-                    <p>Careful detailing and finishing for interior renovation projects.</p>
+                    <p>Detailed craftsmanship for home renovations and upgrades.</p>
                 </article>
 
                 <article class="card">
-                    <img src="images/IMG_5380.jpeg" alt="Renovation / finishing project by Devam Construction">
+                    <img src="images/IMG_5380.jpeg" alt="Basement or interior finishing project">
                     <h3>Finishing Details</h3>
-                    <p>Neat, professional finishing that makes your space feel complete.</p>
+                    <p>Clean finishing touches to make your space feel complete.</p>
                 </article>
 
-                <!-- TV Mount / Feature -->
+                <!-- TV Wall Mount / Feature -->
                 <article class="card">
-                    <img src="images/Tv_mount.JPG" alt="TV mount installation by Devam Construction">
-                    <h3>TV Mount & Wall Feature</h3>
-                    <p>Secure TV mounting and feature wall work for your living room.</p>
+                    <img src="images/Tv_mount.JPG" alt="TV wall mount installation by Devam Construction">
+                    <h3>TV Mount & Feature Wall</h3>
+                    <p>Secure mounting and stylish wall feature for your living space.</p>
                 </article>
+
             </div>
         </div>
     </section>
+
 </main>
 
+<!-- FOOTER -->
 <footer class="site-footer">
     <div class="container footer-bottom">
         © <span id="year-gallery"></span> Devam Construction · Calgary, Alberta
     </div>
+
     <script>
         document.getElementById('year-gallery').textContent = new Date().getFullYear();
     </script>
 </footer>
+
 </body>
 </html>
