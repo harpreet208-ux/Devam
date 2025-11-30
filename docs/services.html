@@ -1,156 +1,517 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Devam Construction</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header class="site-header">
-    <div class="container nav-container">
-        <div class="logo">
-            <span class="logo-main">DEVAM CONSTRUCTION</span>
-            <span class="logo-sub">CALGARY, ALBERTA</span>
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html" class="active btn-nav">Services</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+/* ===========================
+   Base Reset & Typography
+=========================== */
 
-<main>
-    <!-- HERO (same background as Home) -->
-    <section class="hero">
-        <div class="container hero-grid">
-            <div class="hero-text">
-                <h1>Construction Services for Your Home</h1>
-                <p>
-                    From new decks to full basement development, we provide complete
-                    construction services for Calgary homeowners.
-                </p>
-                <div class="hero-actions">
-                    <a href="#service-list" class="btn-secondary">View All Services</a>
-                    <a href="contact.html" class="btn-primary">Request a Quote</a>
-                </div>
-            </div>
-            <aside class="hero-card">
-                <h2>Home Upgrades Made Simple</h2>
-                <p>One team to plan, build, and finish your project.</p>
-                <div class="hero-stat-row">
-                    <div class="hero-stat">
-                        <div class="stat-number">Decks</div>
-                        <div class="stat-label">& Outdoor Spaces</div>
-                    </div>
-                    <div class="hero-stat">
-                        <div class="stat-number">Basements</div>
-                        <div class="stat-label">& Garages</div>
-                    </div>
-                </div>
-            </aside>
-        </div>
-    </section>
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
-    <!-- SERVICES LIST -->
-    <section class="section" id="service-list">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Main Services</h2>
-                <p>
-                    Practical, long-lasting work designed for Calgary homes and weather.
-                </p>
-            </div>
+html {
+    scroll-behavior: smooth;
+}
 
-            <div class="card-grid">
-                <article class="card">
-                    <h3>Decks & Outdoor Living</h3>
-                    <p>
-                        Custom decks and outdoor spaces built for Alberta’s seasons, with
-                        safe, sturdy framing and clean finishing.
-                    </p>
-                    <ul class="info-list">
-                        <li>Pressure-treated & composite decks</li>
-                        <li>Steps, railings, and privacy screens</li>
-                    </ul>
-                </article>
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #0f172a;
+    background: #f9fafb;
+    line-height: 1.6;
+}
 
-                <article class="card">
-                    <h3>Garages (Attached & Detached)</h3>
-                    <p>
-                        New garages or upgrades to existing ones, including concrete pads,
-                        framing, doors, and insulation.
-                    </p>
-                    <ul class="info-list">
-                        <li>Single & double garages</li>
-                        <li>Storage and workshop options</li>
-                    </ul>
-                </article>
+img {
+    max-width: 100%;
+    display: block;
+}
 
-                <article class="card">
-                    <h3>Basement Development</h3>
-                    <p>
-                        Turn an empty basement into a comfortable living area, extra
-                        bedroom, or rental suite (where permitted).
-                    </p>
-                    <ul class="info-list">
-                        <li>Framing, drywall, and flooring</li>
-                        <li>Kitchenette, bathroom, and lighting</li>
-                    </ul>
-                </article>
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
-                <article class="card">
-                    <h3>Home Renovations</h3>
-                    <p>
-                        Interior updates that improve daily life: better layouts, fresh
-                        finishes, and practical changes that add value.
-                    </p>
-                    <ul class="info-list">
-                        <li>Kitchen and living area updates</li>
-                        <li>Doors, trim, and feature walls</li>
-                    </ul>
-                </article>
+h1, h2, h3, h4 {
+    margin: 0 0 0.6em;
+    font-weight: 700;
+    color: #0f172a;
+}
 
-                <article class="card">
-                    <h3>Windows & Doors</h3>
-                    <p>
-                        Installations that improve comfort and efficiency while matching the
-                        look of your home.
-                    </p>
-                    <ul class="info-list">
-                        <li>New and replacement units</li>
-                        <li>Exterior and interior doors</li>
-                    </ul>
-                </article>
+p {
+    margin: 0 0 1em;
+    font-size: 1rem;
+    color: #374151;
+}
 
-                <article class="card">
-                    <h3>Custom Projects</h3>
-                    <p>
-                        Have a unique idea for your space? We can help plan and build a
-                        custom solution for your property.
-                    </p>
-                    <ul class="info-list">
-                        <li>Discuss your ideas with us</li>
-                        <li>We’ll give honest feedback and options</li>
-                    </ul>
-                </article>
-            </div>
-        </div>
-    </section>
-</main>
+li {
+    font-size: 1rem;
+    color: #374151;
+}
 
-<footer class="site-footer">
-    <div class="container footer-bottom">
-        © <span id="year-services"></span> Devam Construction · Calgary, Alberta
-    </div>
-    <script>
-        document.getElementById('year-services').textContent = new Date().getFullYear();
-    </script>
-</footer>
-</body>
-</html>
+/* ===========================
+   Layout Helpers
+=========================== */
+
+.container {
+    width: min(1120px, 100% - 32px);
+    margin: 0 auto;
+}
+
+.section {
+    padding: 72px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: clamp(1.8rem, 2.6vw, 2.2rem);
+}
+
+.section-header p {
+    max-width: 640px;
+    margin: 0.5rem auto 0;
+    color: #6b7280;
+}
+
+/* ===========================
+   Skip Link (Accessibility)
+=========================== */
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: 8px;
+    padding: 8px 14px;
+    background: #facc15;
+    color: #111827;
+    font-weight: 600;
+    border-radius: 999px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    left: 12px;
+}
+
+/* ===========================
+   Header (High-contrast)
+=========================== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #0f172a;          /* dark background for strong contrast */
+    border-bottom: 1px solid #020617;
+    color: #f9fafb;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.logo-main {
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #f9fafb;
+}
+
+.logo-sub {
+    font-size: 0.8rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #e5e7eb;               /* light grey on dark = good contrast */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+    color: #e5e7eb;
+    font-weight: 500;
+    position: relative;
+    padding: 4px 0;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #facc15;
+    border-radius: 999px;
+    transition: width 0.18s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* ===========================
+   Hero Section
+=========================== */
+
+.hero {
+    position: relative;
+    padding: 0;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+/* LCP background image controlled in HTML */
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(15, 23, 42, 0.9),
+        rgba(15, 23, 42, 0.65)
+    );
+    z-index: 1;
+}
+
+.hero-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 32px;
+    padding: 96px 0 88px;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: clamp(2.4rem, 3.6vw, 3.2rem);
+    color: #f9fafb;
+}
+
+.hero-text p {
+    font-size: 1.02rem;
+    max-width: 620px;
+    color: #e5e7eb;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* Buttons */
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background-color: #facc15;
+    color: #111827;
+}
+
+.btn-primary:hover {
+    background-color: #fbbf24;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #ffffff;
+    color: #111827;
+}
+
+/* Tag pills under buttons */
+
+.hero-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hero-highlights li {
+    font-size: 0.88rem;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* Right card */
+
+.hero-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(6px);
+    border-radius: 18px;
+    padding: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-card h2 {
+    color: #ffffff;
+}
+
+.hero-card p {
+    color: #e2e8f0;
+}
+
+.hero-stat-row {
+    display: flex;
+    gap: 12px;
+    margin: 15px 0;
+}
+
+.hero-stat {
+    flex: 1;
+    border-radius: 12px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.stat-number {
+    color: #fbbf24;
+    font-weight: 700;
+}
+
+.stat-label {
+    color: #e5e7eb;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.hero-note {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #e5e7eb;
+}
+
+/* ===========================
+   About Preview
+=========================== */
+
+.two-column {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 32px;
+}
+
+.info-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 14px 32px rgba(15, 23, 42, 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+.info-card h3 {
+    margin-bottom: 8px;
+}
+
+.info-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-list li {
+    padding-left: 18px;
+    position: relative;
+    margin-bottom: 0.45rem;
+    color: #4b5563;
+}
+
+.info-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #f97316;
+}
+
+/* ===========================
+   Services Cards
+=========================== */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.1);
+    border: 1px solid #e5e7eb;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #fbbf24;
+}
+
+/* ===========================
+   CTA Section
+=========================== */
+
+.section-accent {
+    background: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.cta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cta-row h2 {
+    margin: 0;
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+.site-footer {
+    background: #f3f4f6;
+    color: #4b5563;
+    border-top: 1px solid #e5e7eb;
+}
+
+.footer-bottom {
+    padding: 18px 0 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* ===========================
+   Responsive: Tablets & Mobile
+=========================== */
+
+@media (max-width: 720px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding-bottom: 10px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .section {
+        padding: 56px 0;
+    }
+
+    .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 80px 0 64px;
+        gap: 24px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-highlights {
+        gap: 8px;
+    }
+
+    .hero-card {
+        margin-top: 16px;
+    }
+
+    .two-column {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .card-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: min(100% - 24px, 100%);
+    }
+
+    .logo-main {
+        font-size: 1.2rem;
+    }
+
+    .logo-sub {
+        font-size: 0.7rem;
+    }
+
+    .hero-grid {
+        padding: 72px 0 56px;
+    }
+
+    .hero-text p {
+        font-size: 0.96rem;
+    }
+}
